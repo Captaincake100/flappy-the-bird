@@ -75,6 +75,22 @@ class Bird:
 	def get_mask(self):
 		return pygame.mask.from_surface(self.img)
 
+class pipe:
+	GAP = 200
+	VEL = 5
+
+	def __init__(self, x):
+		self.x = x
+		self.gap = 100
+		self.hight = 0
+
+		self.top = 0
+		self.bottom = 0
+		self.PIPE_TOP = pygame.transform.flip(pipe_IMG, False, True)
+		self.pipe_BOTTOM = pipe_IMG
+		
+
+
 
 def draw_window(win, bird):
 	win.blit(bg_IMG, (0,0))
@@ -93,7 +109,7 @@ def main():
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				run = False
-		bird.move()
+		# bird.move()
 		draw_window(win, bird)
 	pygame.quit()
 	quit()
