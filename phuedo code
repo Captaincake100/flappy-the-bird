@@ -1,0 +1,21 @@
+num = input(0, 23)
+num2 = num
+am = " am"
+pm = " pm"
+a_p = True
+
+if num < 12
+     num = num - 12
+     a/p = False
+else:
+    break
+
+if num2 == 0
+    print("midnight")
+else if num2 == 12
+    print("miday")
+else if a_p == True
+    output(num am)
+else if a_p == False
+    output(num pm)
+
