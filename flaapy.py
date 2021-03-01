@@ -224,7 +224,7 @@ def main(genomes, config):
 		if add_pipe:
 			score += 1
 			for g in ge:
-				g.fitness += 0.1 
+				g.fitness += 1 
 			pipes.append(Pipe(700))
 
 		if score > 999:
