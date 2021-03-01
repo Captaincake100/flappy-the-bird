@@ -198,7 +198,7 @@ def main(genomes, config):
 
 		for x, bird in enumerate(birds):
 			bird.move()
-			output = nets[birds.index(bird)].activate((bird.y, abs(bird.y - pipes[pipe_ind].hight), abs(bird.y - pipes[pipe_ind].bottom)))
+			output = nets[birds.index(bird)].activate((bird.y, abs(bird.y - pipes[pipe_ind].hight)))
 			if output[0] > 0.5:
 				bird.jump()
 
@@ -224,7 +224,7 @@ def main(genomes, config):
 		if add_pipe:
 			score += 1
 			for g in ge:
-				g.fitness += 0.1 
+				g.fitness += 1
 			pipes.append(Pipe(700))
 
 		if score > 999:
