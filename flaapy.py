@@ -104,7 +104,7 @@ class Pipe:
 		self.bottom =  self.hight + self.gap
 
 	def move(self):
-		self.x -= self.VEL + score**score
+		self.x -= self.VEL
 
 	def draw(self, win):
 		win.blit(self.PIPE_TOP, (self.x, self.top))
@@ -181,7 +181,7 @@ def main(genomes, config):
 	score = 0
 	run = True
 	while run:
-		clock.tick(30 + score**score)
+		clock.tick(30)
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				run = False
